@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@import './_palette';
+
+@include mat.all-component-typographies();
+@include mat.core();
+
+$app-theme-primary: mat.define-palette($app-primary, 50, 10, 70);
+$app-theme-accent: mat.define-palette($app-accent, 50, 10, 70);
+
+$app-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-theme-primary,
+      accent: $app-theme-accent,
+    ),
+    density: 0,
+  )
+);
+
+$app-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-theme-primary,
+      accent: $app-theme-accent,
+    ),
+    density: 0,
+  )
+);
+
+// default
+@include mat.all-component-themes($app-light-theme);
+
+html[theme='dark-theme'] {
+  @include mat.all-component-colors($app-dark-theme);
+}
+
+html[theme='light-theme'] {
+}
+
+@include mat.core();

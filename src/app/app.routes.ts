@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import { ShippingComponent } from './strategy-pattern/shipping/shipping.component';
 
 export const routes: Routes = [
-    {
-        path: 'shipping',
-        component: ShippingComponent
-    }
+  {
+    path: '',
+    redirectTo: 'strategy',
+    pathMatch: 'full',
+  },
+  {
+    path: 'strategy',
+    loadChildren: () =>
+      import('./strategy-pattern/strategy-pattern.routes').then((item) => item.routes),
+  },
 ];
