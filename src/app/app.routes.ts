@@ -11,4 +11,9 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./strategy-pattern/strategy-pattern.routes').then((item) => item.routes),
   },
+  {
+    path: 'factory',
+    loadChildren: () =>
+      import('./factory-pattern/factory-pattern.routes').then((item) => item.routes),
+  },
 ];
