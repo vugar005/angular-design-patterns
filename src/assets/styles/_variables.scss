@@ -1,0 +1,20 @@
+:root {
+  --app-primary-50: #2c2c54;
+  --app-primary-light: rgb(112, 111, 211);
+  --app-text-color: rgba(0, 0, 0, 0.87);
+  --app-disabled: #00000042;
+  --app-background-color: #fbfbf8;
+  --app-box-shadow: 0 2px 2px 0 var(--app-primary-50);
+  --header-height: 5rem;
+  --header-z-index: 2;
+  --app-spec-background-primary: #fbfbf8;
+  --app-spec-background-solid: #fbfbf8;
+  --app-spec-10-percent-layer: rgba(0, 0, 0, 0.1);
+  --app-spec-5-percent-layer: rgba(0, 0, 0, 0.05);
+  --app-header-height: 6rem;
+  --app-footer-height: 6rem;
+  --app-app-tone: 30%;
+  --app-tech-icon-primary: var(--app-primary-50);
+  --app-tech-icon-accent: var(--app-primary-80);
+  --app-tech-icon-text-color: #dcdde1;
+}

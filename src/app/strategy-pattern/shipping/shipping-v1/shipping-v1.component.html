@@ -1,0 +1,13 @@
+<mat-form-field>
+  <mat-label>Shipping Strategy</mat-label>
+  <mat-select [value]="selectedOption">
+    <mat-option [value]="'EXPRESS'" (click)="onStrategyChange('EXPRESS')">EXPRESS </mat-option>
+    <mat-option [value]="'ECONOMY'" (click)="onStrategyChange('ECONOMY')">ECONOMY </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="shipping-card" *ngIf="selectedOption">
+  <p><b>Type: </b> {{ type }}</p>
+  <p><b>Cost: </b> {{ cost }}</p>
+  <p><b>Estimated Time: </b> {{ estimatedTime }}</p>
+</div>
